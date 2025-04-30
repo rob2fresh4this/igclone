@@ -2,7 +2,7 @@ import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import { GrandHotel_400Regular, useFonts } from '@expo-google-fonts/grand-hotel'
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
-import { faHeart } from '@fortawesome/free-regular-svg-icons';
+import { faHeart, faPaperPlane } from '@fortawesome/free-regular-svg-icons';
 
 export default function HeaderComponents() {
     const [isLoaded] = useFonts({
@@ -17,8 +17,9 @@ export default function HeaderComponents() {
             <View>
                 <Text style={[styles.WhiteText, styles.HeaderText, { fontFamily: "GrandHotel_400Regular" }]}>Instagram</Text>
             </View>
-            <View>
+            <View style={{ flexDirection: 'row', alignItems: 'center' }}>
                 <FontAwesomeIcon icon={faHeart} style={{color: "white", marginRight: 25}} size={25} />
+                <FontAwesomeIcon icon={faPaperPlane} style={{color: "white", marginRight: 25}} size={25} />
             </View>
         </View>
     )
@@ -26,7 +27,11 @@ export default function HeaderComponents() {
 
 const styles = StyleSheet.create({
     HeaderConteainer: {
-        marginTop: 5
+        marginTop: 5,
+        paddingLeft: 10,
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center'
     },
     WhiteText: {
         color: 'white'

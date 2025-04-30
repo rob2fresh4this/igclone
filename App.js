@@ -2,12 +2,14 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import HeaderComponents from './components/HeaderComponents';
-
+import FooterComponent from './components/FooterComponent';
 
 export default function App() {
   return (
     <SafeAreaView style={styles.container}>
       <HeaderComponents />
+      <FooterComponent />
+      <StatusBar style='light' />
     </SafeAreaView>
   );
 }
